@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Juhi ❤️</title>
+  <meta name="description" content="A birthday storybook for Juhi, from Animesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+  <div class="stars" aria-hidden="true"></div>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="app">
+    <section id="cover" class="cover screen active" aria-label="Birthday cover">
+      <div class="cover-card">
+        <p class="eyebrow">A little birthday gift for</p>
+        <h1 class="cover-title">Juhi</h1>
+        <p class="cover-subtitle">A few memories, a few pages, and a letter from my heart.</p>
+        <div class="cover-actions">
+          <button id="openBookBtn" class="btn btn-primary">Open the story</button>
+          <button id="musicBtnCover" class="btn btn-ghost" aria-label="Toggle music">♫ Music Off</button>
+        </div>
+        <p class="cover-note">Best viewed with sound on.</p>
+      </div>
+      <div class="gift-hint">
+        <span class="gift-line"></span>
+        <span>Happy Birthday, my love</span>
+        <span class="gift-line"></span>
+      </div>
+    </section>
+
+    <section id="bookView" class="book-view screen" aria-label="Storybook pages">
+      <div class="book-shell">
+        <div class="book-glow"></div>
+
+        <div class="book-topbar">
+          <div class="topbar-left">
+            <span class="book-label">Our Little Storybook</span>
+          </div>
+          <div class="topbar-right">
+            <button id="musicBtn" class="icon-btn" aria-label="Toggle music">♫</button>
+          </div>
+        </div>
+
+        <div class="book-stage">
+          <article class="page page-intro page-active" data-page="0">
+            <div class="page-content centered">
+              <p class="chapter">Chapter One</p>
+              <h2>Our Story</h2>
+              <p class="lead">Some moments pass quickly. Some stay with you forever. These are a few of my favorite pages with you.</p>
+            </div>
+          </article>
+
+          <article class="page photo-page" data-page="1">
+            <div class="page-content collage collage-a">
+              <figure class="photo-frame tall">
+                <img src="photos/photo1.jpg" alt="Photo memory 1" />
+                <figcaption>A favorite moment of us.</figcaption>
+              </figure>
+              <figure class="photo-frame">
+                <img src="photos/photo2.jpg" alt="Photo memory 2" />
+                <figcaption>Still one of my happiest memories.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="page photo-page" data-page="2">
+            <div class="page-content collage collage-b">
+              <figure class="photo-frame wide">
+                <img src="photos/photo3.jpg" alt="Photo memory 3" />
+                <figcaption>You make every place feel better.</figcaption>
+              </figure>
+              <figure class="photo-frame">
+                <img src="photos/photo4.jpg" alt="Photo memory 4" />
+                <figcaption>The kind of smile I never get tired of.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="page photo-page" data-page="3">
+            <div class="page-content collage collage-c">
+              <figure class="photo-frame">
+                <img src="photos/photo5.jpg" alt="Photo memory 5" />
+                <figcaption>Just us, and somehow that is enough.</figcaption>
+              </figure>
+              <figure class="photo-frame optional-photo">
+                <img src="photos/photo6.jpg" alt="Photo memory 6" />
+                <figcaption>Another little page I want to keep forever.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="page photo-page optional-spread" data-page="4">
+            <div class="page-content collage collage-d">
+              <figure class="photo-frame optional-photo">
+                <img src="photos/photo7.jpg" alt="Photo memory 7" />
+                <figcaption>More laughter, more memories, more us.</figcaption>
+              </figure>
+              <figure class="photo-frame optional-photo">
+                <img src="photos/photo8.jpg" alt="Photo memory 8" />
+                <figcaption>And many more beautiful moments to come.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="page page-letter" data-page="5">
+            <div class="page-content centered">
+              <p class="chapter">Final Chapter</p>
+              <h2>A Letter for You</h2>
+              <div id="envelope" class="envelope" tabindex="0" role="button" aria-label="Open letter">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body"><span>Open my letter</span></div>
+              </div>
+              <div id="letterCard" class="letter-card" aria-live="polite">
+                <div class="letter-paper">
+                  <p class="letter-line">Happy Birthday, Juhi.</p>
+                  <p class="letter-line">I don’t think I say this enough, but having you in my life has changed everything in the best way.</p>
+                  <p class="letter-line">You make ordinary days feel warm, meaningful, and full of life. Even the smallest moments with you become memories I want to keep.</p>
+                  <p class="letter-line">When I think about us, I don’t just think about the big moments. I think about the laughter, the comfort, the quiet, and the feeling that life is simply better because you are in it.</p>
+                  <p class="letter-line">This little website is a small birthday gift, but what I really wanted to give you is a reminder of how loved you are.</p>
+                  <p class="letter-line">I hope this year brings you joy, peace, growth, and everything your heart has been quietly wishing for.</p>
+                  <p class="letter-line">And through all of it, I’m just grateful that I get to be by your side.</p>
+                  <p class="letter-line signoff">Happy Birthday, my love.<br />— Animesh ❤️</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="book-controls">
+          <button id="prevBtn" class="nav-btn" aria-label="Previous page">←</button>
+          <div class="page-indicator"><span id="pageIndicator">1</span> / <span id="pageTotal">6</span></div>
+          <button id="nextBtn" class="nav-btn" aria-label="Next page">→</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
